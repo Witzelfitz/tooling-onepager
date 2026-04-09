@@ -19,7 +19,7 @@
     </div>
 
     <div class="sidebar-status">
-      <span id="progressCount">0 / 13 Steps</span>
+      <span id="progressCount">0 / 29 Steps</span>
       <button id="resetChecklist" class="mini-btn" type="button">Reset</button>
     </div>
 
@@ -83,9 +83,9 @@
           <span class="section-tag">Setup Flow</span>
           <span class="section-duration">~ 60 Min</span>
         </div>
-        <h1 class="section-title">Tooling One-Pager für Studierende</h1>
+        <h1 class="section-title">Tooling One-Pager für deinen sauberen Semesterstart</h1>
         <p class="section-lead">
-          Ziel: Jede Person kann heute lokal entwickeln, sauber versionieren und zuverlässig auf Hosting deployen.
+          Ziel: Du kannst heute lokal entwickeln, sauber versionieren und zuverlässig auf Hosting deployen – ohne Chaos.
         </p>
 
         <div class="split-grid">
@@ -105,8 +105,19 @@
               <strong>Sauber arbeiten ist Teil der Bewertung.</strong><br />
               Nicht nur Resultat zählt, sondern auch: Struktur, Versionierung und Deploy-Hygiene.
             </p>
-            <label class="checkline"><input type="checkbox" data-check="kickoff-read" /> Kickoff verstanden</label>
+            <label class="checkline"><input type="checkbox" data-check="kickoff-read" /> Ich habe den Gesamtprozess verstanden</label>
           </article>
+        </div>
+
+        <div class="card card--interactive">
+          <div class="card-label">Projektstart-Bibel (immer gleich starten)</div>
+          <ul class="bullet-list">
+            <li>Projektordner lokal erstellen und benennen.</li>
+            <li>Ordner in VS Code öffnen.</li>
+            <li>GitHub Repo anlegen und publishen.</li>
+            <li>SFTP verbinden und ersten Testupload machen.</li>
+          </ul>
+          <label class="checkline"><input type="checkbox" data-check="kickoff-bibel" /> Ich starte neue Projekte ab jetzt immer mit dieser Reihenfolge</label>
         </div>
       </div>
     </section>
@@ -126,8 +137,15 @@
             <a href="https://marketplace.visualstudio.com/items?itemName=Natizyskunk.sftp" target="_blank" rel="noopener">↗ SFTP Extension (Natizyskunk)</a><br />
             <a href="https://marketplace.visualstudio.com/items?itemName=GitHub.copilot" target="_blank" rel="noopener">↗ GitHub Copilot (optional mit Education)</a>
           </p>
-          <label class="checkline"><input type="checkbox" data-check="vscode-install" /> VS Code installiert</label>
-          <label class="checkline"><input type="checkbox" data-check="vscode-extensions" /> SFTP Extension installiert</label>
+          <ol class="step-list click-path">
+            <li>Lade VS Code herunter und installiere es.</li>
+            <li>Öffne VS Code einmal neu nach der Installation.</li>
+            <li>Gehe links auf <code>Extensions</code> und installiere <code>SFTP (Natizyskunk)</code>.</li>
+            <li>Optional: Melde dich bei VS Code mit GitHub an.</li>
+          </ol>
+          <label class="checkline"><input type="checkbox" data-check="vscode-install" /> VS Code ist installiert</label>
+          <label class="checkline"><input type="checkbox" data-check="vscode-extensions" /> SFTP Extension ist installiert</label>
+          <label class="checkline"><input type="checkbox" data-check="vscode-project-open" /> Ich habe mein Projekt in VS Code geöffnet (nicht Desktop/Downloads)</label>
         </div>
       </div>
     </section>
@@ -191,7 +209,9 @@
         </div>
 
         <label class="checkline"><input type="checkbox" data-check="sftp-file-created" /> <code>.vscode/sftp.json</code> wurde im Projekt korrekt erstellt</label>
+        <label class="checkline"><input type="checkbox" data-check="sftp-credentials" /> Host, Username, Passwort wurden korrekt eingetragen</label>
         <label class="checkline"><input type="checkbox" data-check="sftp-ready" /> SFTP Verbindung funktioniert (Sync Local → Remote)</label>
+        <label class="checkline"><input type="checkbox" data-check="sftp-first-upload" /> Erste Testdatei ist online erreichbar</label>
       </div>
     </section>
 
@@ -235,6 +255,28 @@
           </figure>
         </div>
 
+        <div class="card card--interactive">
+          <div class="card-label">Repository nach Abgabe auf Public stellen (optional, wenn gefordert)</div>
+          <ol class="step-list click-path">
+            <li>GitHub im Browser öffnen und ins richtige Repo gehen.</li>
+            <li><code>Settings</code> → ganz nach unten zu <code>Danger Zone</code>.</li>
+            <li><code>Change repository visibility</code> wählen.</li>
+            <li>Auf <code>Make public</code> stellen und bestätigen.</li>
+            <li>Vorher unbedingt Secrets/Passwörter prüfen.</li>
+          </ol>
+        </div>
+
+        <div class="shot-grid github-shots">
+          <figure class="shot-card">
+            <img class="zoomable" src="./assets/github-public-settings.png" alt="GitHub Repository Settings" loading="lazy" />
+            <figcaption><strong>Settings:</strong> Dort findest du die Sichtbarkeit im Bereich <em>Danger Zone</em>.</figcaption>
+          </figure>
+          <figure class="shot-card">
+            <img class="zoomable" src="./assets/github-public-confirm.png" alt="GitHub public visibility confirmation" loading="lazy" />
+            <figcaption><strong>Make public:</strong> Letzte Bestätigung der Sichtbarkeit.</figcaption>
+          </figure>
+        </div>
+
         <div class="code-wrap">
 <pre><code id="code-gitignore">.DS_Store
 config.php
@@ -255,7 +297,9 @@ node_modules</code></pre>
         </div>
 
         <label class="checkline"><input type="checkbox" data-check="github-repo-created" /> Neues Repository in GitHub Desktop erstellt & publiziert</label>
-        <label class="checkline"><input type="checkbox" data-check="github-clean" /> Erstes sauberes Repo inkl. Commit erstellt</label>
+        <label class="checkline"><input type="checkbox" data-check="github-commit" /> Erster Commit mit sinnvoller Nachricht erstellt</label>
+        <label class="checkline"><input type="checkbox" data-check="github-clean" /> .gitignore ist aktiv und enthält sensible Dateien</label>
+        <label class="checkline"><input type="checkbox" data-check="github-public" /> Falls gefordert: Repository sicher auf Public gestellt</label>
       </div>
     </section>
 
@@ -281,6 +325,16 @@ node_modules</code></pre>
           </ol>
         </div>
 
+        <div class="card">
+          <div class="card-label">Kurz-Ausflug: Subdomains (z. B. projektname.deinedomain.ch)</div>
+          <ul class="bullet-list">
+            <li>Subdomain in Hostpoint unter Domains/Zone verwalten erstellen.</li>
+            <li>Subdomain auf den korrekten Webpfad zeigen lassen.</li>
+            <li>Danach Upload testen und Browser-Cache einmal leeren.</li>
+            <li>Für Modulprojekte: lieber kurze, klare Subdomain-Namen nutzen.</li>
+          </ul>
+        </div>
+
         <div class="shot-grid">
           <figure class="shot-card">
             <img class="zoomable" src="./assets/hostpoint-step-login.jpg" alt="Hostpoint Login und Service Übersicht" loading="lazy" />
@@ -296,7 +350,10 @@ node_modules</code></pre>
           </figure>
         </div>
 
+        <label class="checkline"><input type="checkbox" data-check="hostpoint-login" /> Hostpoint Login erfolgreich</label>
+        <label class="checkline"><input type="checkbox" data-check="hostpoint-ftp-open" /> FTP Bereich gefunden und Daten kopiert</label>
         <label class="checkline"><input type="checkbox" data-check="hostpoint-tested" /> Hostpoint Credentials eingetragen und Verbindung getestet</label>
+        <label class="checkline"><input type="checkbox" data-check="hostpoint-subdomain" /> Ich weiss, wie ich bei Bedarf eine Subdomain aufsetze</label>
       </div>
     </section>
 
@@ -342,6 +399,7 @@ node_modules</code></pre>
         </div>
 
         <label class="checkline"><input type="checkbox" data-check="lanes-understood" /> Meine Lane ist klar (Mac oder Windows) und ich kenne die Shortcuts</label>
+        <label class="checkline"><input type="checkbox" data-check="lanes-tested" /> Ich habe mindestens 2 wichtige Shortcuts in meiner Lane getestet</label>
       </div>
     </section>
 
@@ -366,6 +424,14 @@ node_modules</code></pre>
           <div class="tl-item tl-item--active"><div class="tl-dot"></div><div class="tl-label">Check</div><div class="tl-time">Live testen</div></div>
         </div>
 
+        <div class="card">
+          <div class="card-label">Checkliste pro Arbeitsblock</div>
+          <label class="checkline"><input type="checkbox" data-check="workflow-plan" /> Plan (1 Satz Ziel) vor dem Start geschrieben</label>
+          <label class="checkline"><input type="checkbox" data-check="workflow-commit" /> Commit nach dem Block erstellt</label>
+          <label class="checkline"><input type="checkbox" data-check="workflow-sync" /> Push + SFTP Deploy durchgeführt</label>
+          <label class="checkline"><input type="checkbox" data-check="workflow-check" /> Live-URL geprüft (Browser)</label>
+        </div>
+
         <label class="checkline"><input type="checkbox" data-check="workflow-done" /> Workflow einmal komplett durchgeführt</label>
       </div>
     </section>
@@ -385,6 +451,8 @@ node_modules</code></pre>
             <li>Keine sensiblen Daten im Repo</li>
           </ul>
         </div>
+        <label class="checkline"><input type="checkbox" data-check="final-qa" /> Ich habe geprüft, dass keine Passwörter/Secrets im Repo liegen</label>
+        <label class="checkline"><input type="checkbox" data-check="final-link" /> Ich habe meine Live-URL + Repo-URL dokumentiert</label>
         <label class="checkline"><input type="checkbox" data-check="final-done" /> Setup komplett abgeschlossen</label>
       </div>
     </section>
