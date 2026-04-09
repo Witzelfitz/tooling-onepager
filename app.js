@@ -9,6 +9,10 @@ const checkboxes = Array.from(document.querySelectorAll('input[data-check]'));
 const progressCount = document.getElementById('progressCount');
 const resetChecklistBtn = document.getElementById('resetChecklist');
 const copyButtons = Array.from(document.querySelectorAll('button[data-copy]'));
+const zoomableImages = Array.from(document.querySelectorAll('.zoomable'));
+const imageModal = document.getElementById('imageModal');
+const imageModalImg = document.getElementById('imageModalImg');
+const imageModalClose = document.getElementById('imageModalClose');
 
 function loadState() {
   try {
@@ -109,6 +113,36 @@ function updateProgressBarByScroll() {
   progressBar.style.width = `${pct}%`;
 }
 
+function initImageModal() {
+  if (!imageModal || !imageModalImg || !imageModalClose) return;
+
+  const openModal = (src, alt) => {
+    imageModalImg.src = src;
+    imageModalImg.alt = alt || 'Vergrössertes Bild';
+    imageModal.hidden = false;
+    document.body.style.overflow = 'hidden';
+  };
+
+  const closeModal = () => {
+    imageModal.hidden = true;
+    imageModalImg.src = '';
+    document.body.style.overflow = '';
+  };
+
+  zoomableImages.forEach((img) => {
+    img.addEventListener('click', () => openModal(img.currentSrc || img.src, img.alt));
+  });
+
+  imageModalClose.addEventListener('click', closeModal);
+  imageModal.addEventListener('click', (event) => {
+    if (event.target === imageModal) closeModal();
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && !imageModal.hidden) closeModal();
+  });
+}
+
 function initSectionObserver() {
   const observer = new IntersectionObserver(
     (entries) => {
@@ -131,4 +165,5 @@ function initSectionObserver() {
 initChecklist();
 initCopy();
 initNav();
+initImageModal();
 initSectionObserver();

@@ -139,7 +139,17 @@
           <span class="section-duration">15 Min</span>
         </div>
         <h2 class="section-title">SFTP Konfiguration (Copy / Paste)</h2>
-        <p class="section-lead">Ich nehme die Studierenden hier bewusst an die Hand – Schritt für Schritt im richtigen Projektordner.</p>
+        <p class="section-lead">Du wirst hier Schritt für Schritt geführt – damit SFTP im richtigen Projektordner sofort sauber funktioniert.</p>
+
+        <div class="card">
+          <div class="card-label">Was heisst „Projektordner öffnen“?</div>
+          <ul class="bullet-list">
+            <li>Du öffnest in VS Code <strong>genau den Ordner deiner Website</strong> (z. B. <code>im1-portfolio-max</code>).</li>
+            <li>Darin liegen deine Dateien wie <code>index.html</code>, <code>styles.css</code>, <code>script.js</code>.</li>
+            <li><strong>Nicht</strong> Desktop/Downloads/ganzer Benutzerordner öffnen.</li>
+            <li>Quick-Check: In VS Code links im Explorer siehst du oben den Projektnamen.</li>
+          </ul>
+        </div>
 
         <div class="card card--interactive">
           <div class="card-label">SFTP-Datei im Projekt erstellen (genau so)</div>
@@ -199,17 +209,30 @@
             <a href="https://education.github.com/students" target="_blank" rel="noopener">↗ GitHub Education</a><br />
             <a href="https://desktop.github.com/" target="_blank" rel="noopener">↗ GitHub Desktop</a>
           </p>
-          <label class="checkline"><input type="checkbox" data-check="github-account" /> GitHub Account vorhanden</label>
-          <label class="checkline"><input type="checkbox" data-check="github-desktop" /> GitHub Desktop eingerichtet</label>
+          <label class="checkline"><input type="checkbox" data-check="github-account" /> Du hast einen GitHub Account</label>
+          <label class="checkline"><input type="checkbox" data-check="github-desktop" /> Du bist in GitHub Desktop eingeloggt</label>
 
-          <div class="card-label" style="margin-top:10px;">Projekt in GitHub Desktop erstellen (genau so)</div>
-          <ol class="step-list">
-            <li>GitHub Desktop öffnen → <strong>File → New Repository</strong>.</li>
-            <li><strong>Repository Name</strong> sinnvoll setzen (z.B. <code>im1-portfolio-max-muster</code>).</li>
-            <li><strong>Local Path</strong> bewusst wählen (nicht chaotisch verteilt).</li>
-            <li><strong>README</strong> aktivieren, danach <strong>Create Repository</strong>.</li>
-            <li>Direkt <strong>Publish repository</strong> auf GitHub ausführen.</li>
+          <div class="card-label" style="margin-top:10px;">Projekt in GitHub Desktop erstellen (klick-genau)</div>
+          <ol class="step-list click-path">
+            <li><code>GitHub Desktop öffnen</code></li>
+            <li><code>Add ▾</code> klicken</li>
+            <li><code>Create New Repository...</code> wählen</li>
+            <li>Repository Name setzen (z. B. <code>im1-portfolio-max-muster</code>)</li>
+            <li>Local Path wählen, der zu deinem Modul-Projekt gehört</li>
+            <li><code>Create Repository</code> klicken</li>
+            <li><code>Publish repository</code> klicken</li>
           </ol>
+        </div>
+
+        <div class="shot-grid github-shots">
+          <figure class="shot-card">
+            <img class="zoomable" src="./assets/github-desktop-main.jpg" alt="GitHub Desktop Übersicht" loading="lazy" />
+            <figcaption><strong>GitHub Desktop:</strong> Repository-Übersicht mit Changes/History.</figcaption>
+          </figure>
+          <figure class="shot-card">
+            <img class="zoomable" src="./assets/github-desktop-create-repo.jpg" alt="GitHub Desktop Create New Repository" loading="lazy" />
+            <figcaption><strong>Add ▾ → Create New Repository…</strong> Genau hier startest du ein neues Projekt.</figcaption>
+          </figure>
         </div>
 
         <div class="code-wrap">
@@ -245,18 +268,31 @@ node_modules</code></pre>
         <h2 class="section-title">Hostpoint Zugang + FTP Credentials holen</h2>
         <p class="section-lead">Login meist mit <code>vorname.nachname@stud.fhgr.ch</code>, danach FTP Daten in <code>sftp.json</code> eintragen.</p>
 
+        <div class="card card--interactive">
+          <div class="card-label">Hostpoint Klick-Checklist (genaue Reihenfolge)</div>
+          <ol class="step-list click-path">
+            <li><code>Login</code> mit <code>vorname.nachname@stud.fhgr.ch</code></li>
+            <li><code>Hosting</code> / richtigen Service öffnen</li>
+            <li><code>Server</code> Bereich öffnen</li>
+            <li><code>FTP</code> bzw. <code>FTP Accounts</code> öffnen</li>
+            <li><code>Hostname</code>, <code>Username</code>, <code>Passwort</code> kopieren</li>
+            <li>Daten in <code>.vscode/sftp.json</code> einsetzen und speichern</li>
+            <li>In VS Code: <code>SFTP: Sync Local -&gt; Remote</code> ausführen</li>
+          </ol>
+        </div>
+
         <div class="shot-grid">
           <figure class="shot-card">
-            <img src="./assets/hostpoint-step-login.jpg" alt="Hostpoint Login und Service Übersicht" loading="lazy" />
-            <figcaption><strong>Schritt A:</strong> Login und richtigen Service/Hosting-Bereich wählen.</figcaption>
+            <img class="zoomable" src="./assets/hostpoint-step-login.jpg" alt="Hostpoint Login und Service Übersicht" loading="lazy" />
+            <figcaption><strong>Schritt A:</strong> Login und richtigen Service/Hosting-Bereich wählen. <em>(Klick zum Vergrössern)</em></figcaption>
           </figure>
           <figure class="shot-card">
-            <img src="./assets/hostpoint-step-server.jpg" alt="Hostpoint Server Übersicht" loading="lazy" />
-            <figcaption><strong>Schritt B:</strong> Serverübersicht öffnen und zu FTP wechseln.</figcaption>
+            <img class="zoomable" src="./assets/hostpoint-step-server.jpg" alt="Hostpoint Server Übersicht" loading="lazy" />
+            <figcaption><strong>Schritt B:</strong> Serverübersicht öffnen und zu FTP wechseln. <em>(Klick zum Vergrössern)</em></figcaption>
           </figure>
           <figure class="shot-card">
-            <img src="./assets/hostpoint-step-ftp.jpg" alt="Hostpoint FTP Accounts" loading="lazy" />
-            <figcaption><strong>Schritt C:</strong> Host, Username, Passwort übernehmen und in VS Code testen.</figcaption>
+            <img class="zoomable" src="./assets/hostpoint-step-ftp.jpg" alt="Hostpoint FTP Accounts" loading="lazy" />
+            <figcaption><strong>Schritt C:</strong> Host, Username, Passwort übernehmen und in VS Code testen. <em>(Klick zum Vergrössern)</em></figcaption>
           </figure>
         </div>
 
@@ -353,6 +389,11 @@ node_modules</code></pre>
       </div>
     </section>
   </main>
+
+  <div class="image-modal" id="imageModal" hidden>
+    <button class="image-modal-close" id="imageModalClose" aria-label="Bild schliessen">✕</button>
+    <img id="imageModalImg" src="" alt="Vergrössertes Bild" />
+  </div>
 
   <script src="./app.js"></script>
 </body>
