@@ -385,6 +385,26 @@ code {
   margin-bottom: 12px;
 }
 
+.code-wrap.critical {
+  border: 2px solid var(--red-mid);
+  border-left: 5px solid var(--red);
+  border-radius: 10px;
+  background: linear-gradient(180deg, rgba(188, 43, 33, 0.08), rgba(188, 43, 33, 0.02));
+  padding: 10px;
+}
+
+.critical-note {
+  margin: 0 0 8px;
+  color: color-mix(in srgb, var(--red) 88%, black 12%);
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.code-wrap.critical pre {
+  margin-bottom: 8px;
+  border-color: color-mix(in srgb, var(--red-mid) 70%, var(--border-md));
+}
+
 pre {
   border: 1px solid var(--border-md);
   background: #fffdfa;

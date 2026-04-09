@@ -180,7 +180,8 @@
           </ol>
         </div>
 
-        <div class="code-wrap">
+        <div class="code-wrap critical">
+          <p class="critical-note">🔴 Pflicht-Schritt: Ohne diese SFTP-Konfiguration funktioniert dein Upload/Deploy nicht zuverlässig.</p>
 <pre><code id="code-sftp">{
   "name": "hostpoint-main",
   "host": "replace-this-hostname",
@@ -277,7 +278,8 @@
           </figure>
         </div>
 
-        <div class="code-wrap">
+        <div class="code-wrap critical">
+          <p class="critical-note">🔴 Pflicht-Schritt: <code>.gitignore</code> schützt dich vor peinlichen/leaken Dateien im Repository.</p>
 <pre><code id="code-gitignore">.DS_Store
 config.php
 .vscode
