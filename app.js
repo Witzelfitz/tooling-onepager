@@ -13,6 +13,7 @@ const zoomableImages = Array.from(document.querySelectorAll('.zoomable'));
 const imageModal = document.getElementById('imageModal');
 const imageModalImg = document.getElementById('imageModalImg');
 const imageModalClose = document.getElementById('imageModalClose');
+const shotCards = Array.from(document.querySelectorAll('.shot-card'));
 
 function loadState() {
   try {
@@ -117,6 +118,7 @@ function initImageModal() {
   if (!imageModal || !imageModalImg || !imageModalClose) return;
 
   const openModal = (src, alt) => {
+    if (!src) return;
     imageModalImg.src = src;
     imageModalImg.alt = alt || 'Vergrössertes Bild';
     imageModal.hidden = false;
@@ -129,8 +131,20 @@ function initImageModal() {
     document.body.style.overflow = '';
   };
 
+  // Safety: modal starts hidden on every page load
+  closeModal();
+
   zoomableImages.forEach((img) => {
     img.addEventListener('click', () => openModal(img.currentSrc || img.src, img.alt));
+  });
+
+  // Also allow click on the full card (image or caption area)
+  shotCards.forEach((card) => {
+    card.addEventListener('click', () => {
+      const img = card.querySelector('img');
+      if (!img) return;
+      openModal(img.currentSrc || img.src, img.alt);
+    });
   });
 
   imageModalClose.addEventListener('click', closeModal);

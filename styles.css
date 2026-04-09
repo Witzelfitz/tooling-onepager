@@ -430,6 +430,21 @@ code {
   border-radius: 10px;
   overflow: hidden;
   background: #fff;
+  position: relative;
+}
+
+.shot-card::after {
+  content: '🔎';
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  font-size: 13px;
+  line-height: 1;
+  background: rgba(255,255,255,0.85);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 3px 5px;
+  pointer-events: none;
 }
 
 .shot-card img {
@@ -444,7 +459,8 @@ code {
   color: var(--text-muted);
 }
 
-.zoomable {
+.zoomable,
+.shot-card {
   cursor: zoom-in;
 }
 
@@ -456,6 +472,10 @@ code {
   display: grid;
   place-items: center;
   padding: 22px;
+}
+
+.image-modal[hidden] {
+  display: none !important;
 }
 
 .image-modal img {
