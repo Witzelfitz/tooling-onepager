@@ -1,197 +1,242 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tooling Setup · IM</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./styles.css" />
-</head>
-<body>
-  <div class="progress-bar" id="progressBar"></div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tooling Setup · IM</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="progress-bar" id="progressBar"></div>
 
-  <nav class="sidebar" id="sidebar">
-    <div class="sidebar-brand">
-      <span class="brand-label">TOOLING</span>
-      <span class="brand-sub">IM Web Grundlagen</span>
-    </div>
+    <nav class="sidebar" id="sidebar">
+      <div class="sidebar-brand">
+        <span class="brand-label">TOOLING</span>
+        <span class="brand-sub">IM Web Grundlagen</span>
+      </div>
 
-    <div class="sidebar-status">
-      <span id="progressCount">0 / 30 Steps</span>
-      <button id="resetChecklist" class="mini-btn" type="button">Reset</button>
-    </div>
+      <div class="sidebar-status">
+        <span id="progressCount">0 / 30 Steps</span>
+        <button id="resetChecklist" class="mini-btn" type="button">Reset</button>
+      </div>
 
-    <ul class="nav-list" id="navList">
-      <li class="nav-item active" data-target="kickoff">
-        <span class="nav-num">01</span>
-        <span class="nav-text">Kickoff</span>
-        <span class="nav-time">5'</span>
-      </li>
-      <li class="nav-item" data-target="vscode">
-        <span class="nav-num">02</span>
-        <span class="nav-text">VS Code</span>
-        <span class="nav-time">10'</span>
-      </li>
-      <li class="nav-item" data-target="sftp">
-        <span class="nav-num">03</span>
-        <span class="nav-text">SFTP Setup</span>
-        <span class="nav-time">15'</span>
-      </li>
-      <li class="nav-item" data-target="github">
-        <span class="nav-num">04</span>
-        <span class="nav-text">GitHub Setup</span>
-        <span class="nav-time">20'</span>
-      </li>
-      <li class="nav-item" data-target="hostpoint">
-        <span class="nav-num">05</span>
-        <span class="nav-text">Hostpoint</span>
-        <span class="nav-time">15'</span>
-      </li>
-      <li class="nav-item" data-target="lanes">
-        <span class="nav-num">06</span>
-        <span class="nav-text">Mac / Windows Lane</span>
-        <span class="nav-time">8'</span>
-      </li>
-      <li class="nav-item" data-target="quality">
-        <span class="nav-num">07</span>
-        <span class="nav-text">Sauber arbeiten</span>
-        <span class="nav-time">10'</span>
-      </li>
-      <li class="nav-item" data-target="done">
-        <span class="nav-num">08</span>
-        <span class="nav-text">Done-Definition</span>
-        <span class="nav-time">5'</span>
-      </li>
-    </ul>
+      <ul class="nav-list" id="navList">
+        <li class="nav-item active" data-target="kickoff">
+          <span class="nav-num">01</span>
+          <span class="nav-text">Kickoff</span>
+          <span class="nav-time">5'</span>
+        </li>
+        <li class="nav-item" data-target="vscode">
+          <span class="nav-num">02</span>
+          <span class="nav-text">VS Code</span>
+          <span class="nav-time">10'</span>
+        </li>
+        <li class="nav-item" data-target="sftp">
+          <span class="nav-num">03</span>
+          <span class="nav-text">SFTP Setup</span>
+          <span class="nav-time">15'</span>
+        </li>
+        <li class="nav-item" data-target="github">
+          <span class="nav-num">04</span>
+          <span class="nav-text">GitHub Setup</span>
+          <span class="nav-time">20'</span>
+        </li>
+        <li class="nav-item" data-target="hostpoint">
+          <span class="nav-num">05</span>
+          <span class="nav-text">Hostpoint</span>
+          <span class="nav-time">15'</span>
+        </li>
+        <li class="nav-item" data-target="lanes">
+          <span class="nav-num">06</span>
+          <span class="nav-text">Mac / Windows Lane</span>
+          <span class="nav-time">8'</span>
+        </li>
+        <li class="nav-item" data-target="quality">
+          <span class="nav-num">07</span>
+          <span class="nav-text">Sauber arbeiten</span>
+          <span class="nav-time">10'</span>
+        </li>
+        <li class="nav-item" data-target="done">
+          <span class="nav-num">08</span>
+          <span class="nav-text">Done-Definition</span>
+          <span class="nav-time">5'</span>
+        </li>
+      </ul>
 
-    <div class="sidebar-footer">
-      <span>Basis: Interaktive-Medien/101-MMP</span>
-      <a href="https://github.com/Interaktive-Medien/101-MMP" target="_blank" rel="noopener">Repository öffnen ↗</a>
-    </div>
-  </nav>
+      <div class="sidebar-footer">
+        <span>Basis: Interaktive-Medien/101-MMP</span>
+        <a href="https://github.com/Interaktive-Medien/101-MMP" target="_blank" rel="noopener">Repository öffnen ↗</a>
+      </div>
+    </nav>
 
-  <button class="menu-toggle" id="menuToggle" aria-label="Menü öffnen">
-    <span></span><span></span><span></span>
-  </button>
+    <button class="menu-toggle" id="menuToggle" aria-label="Menü öffnen"><span></span><span></span><span></span></button>
 
-  <main class="main-content">
-    <section class="section active" id="kickoff">
-      <div class="section-inner">
-        <div class="section-header">
-          <span class="section-tag">Setup Flow</span>
-          <span class="section-duration">~ 60 Min</span>
-        </div>
-        <h1 class="section-title">Tooling One-Pager für deinen sauberen Semesterstart</h1>
-        <p class="section-lead">
-          Ziel: Du kannst heute lokal entwickeln, sauber versionieren und zuverlässig auf Hosting deployen – ohne Chaos.
-        </p>
+    <main class="main-content">
+      <section class="section active" id="kickoff">
+        <div class="section-inner">
+          <div class="section-header">
+            <span class="section-tag">Setup Flow</span>
+            <span class="section-duration">~ 60 Min</span>
+          </div>
+          <h1 class="section-title">Tooling One-Pager für deinen sauberen Semesterstart</h1>
+          <p class="section-lead">
+            Ziel: Du kannst heute lokal entwickeln, sauber versionieren und zuverlässig auf Hosting deployen – ohne Chaos.
+          </p>
 
-        <div class="split-grid">
-          <article class="card card--accent">
-            <div class="card-label">Was am Ende funktionieren muss</div>
-            <ul class="check-list check-list--yes">
-              <li>VS Code ist installiert</li>
-              <li>SFTP in VS Code ist korrekt konfiguriert</li>
-              <li>GitHub + GitHub Desktop sind eingerichtet</li>
-              <li>Hostpoint Credentials sind getestet</li>
-              <li>Projektworkflow ist sauber und nachvollziehbar</li>
+          <div class="split-grid">
+            <article class="card card--accent">
+              <div class="card-label">Was am Ende funktionieren muss</div>
+              <ul class="check-list check-list--yes">
+                <li>VS Code ist installiert</li>
+                <li>SFTP in VS Code ist korrekt konfiguriert</li>
+                <li>GitHub + GitHub Desktop sind eingerichtet</li>
+                <li>Hostpoint Credentials sind getestet</li>
+                <li>Projektworkflow ist sauber und nachvollziehbar</li>
+              </ul>
+            </article>
+            <article class="card">
+              <div class="card-label">Wichtige Regel</div>
+              <p>
+                <strong>Sauber arbeiten ist Teil der Bewertung.</strong><br />
+                Nicht nur Resultat zählt, sondern auch: Struktur, Versionierung und Deploy-Hygiene.
+              </p>
+              <label class="checkline"><input type="checkbox" data-check="kickoff-read" /> Ich habe den Gesamtprozess verstanden</label>
+            </article>
+          </div>
+
+          <div class="card card--interactive">
+            <div class="card-label">Projektstart-Bibel (immer gleich starten)</div>
+            <ul class="bullet-list">
+              <li>Projektordner an einem sinnvollen Ort (nicht Desktop oder Download) lokal erstellen und benennen.</li>
+              <li>Projektordner in VS Code öffnen.</li>
+              <li>GitHub Repository anlegen und publishen.</li>
+              <li>SFTP verbinden und ersten Testupload machen.</li>
             </ul>
-          </article>
-          <article class="card">
-            <div class="card-label">Wichtige Regel</div>
+            <ul class="checkbox-list">
+              <li>
+                <label class="checkline"
+                  ><input type="checkbox" data-check="kickoff-bibel" /> Ich starte neue Projekte ab jetzt immer mit dieser
+                  Reihenfolge</label
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="card card--accent">
+            <div class="card-label">Projektvorlage (Download)</div>
+            <p>Nutze diese Vorlage als Startpunkt für neue Modulprojekte, damit Struktur und Dateien direkt passen.</p>
             <p>
-              <strong>Sauber arbeiten ist Teil der Bewertung.</strong><br />
-              Nicht nur Resultat zählt, sondern auch: Struktur, Versionierung und Deploy-Hygiene.
+              <a class="btn" href="./downloads/VORLAGE_IntMe.zip" download>⬇ Vorlage herunterladen (ZIP)</a>
             </p>
-            <label class="checkline"><input type="checkbox" data-check="kickoff-read" /> Ich habe den Gesamtprozess verstanden</label>
-          </article>
+            <ul class="checkbox-list">
+              <li>
+                <label class="checkline"
+                  ><input type="checkbox" data-check="kickoff-template-download" /> Ich habe die Vorlage heruntergeladen</label
+                >
+              </li>
+            </ul>
+          </div>
         </div>
+      </section>
 
-        <div class="card card--interactive">
-          <div class="card-label">Projektstart-Bibel (immer gleich starten)</div>
-          <ul class="bullet-list">
-            <li>Projektordner lokal erstellen und benennen.</li>
-            <li>Ordner in VS Code öffnen.</li>
-            <li>GitHub Repo anlegen und publishen.</li>
-            <li>SFTP verbinden und ersten Testupload machen.</li>
-          </ul>
-          <label class="checkline"><input type="checkbox" data-check="kickoff-bibel" /> Ich starte neue Projekte ab jetzt immer mit dieser Reihenfolge</label>
+      <section class="section" id="vscode">
+        <div class="section-inner">
+          <div class="section-header">
+            <span class="section-tag">02 · VS Code</span>
+            <span class="section-duration">10 Min</span>
+          </div>
+          <h2 class="section-title">Visual Studio Code + Basis Extensions</h2>
+          <p class="section-lead">VS Code muss installiert sein. Danach Erweiterungen sauber nachziehen.</p>
+
+          <div class="card card--interactive">
+            <p>
+              <a href="https://code.visualstudio.com/" target="_blank" rel="noopener">↗ VS Code Download</a><br />
+              <a href="https://marketplace.visualstudio.com/items?itemName=Natizyskunk.sftp" target="_blank" rel="noopener"
+                >↗ SFTP Extension (Natizyskunk)</a
+              ><br />
+              <a href="https://marketplace.visualstudio.com/items?itemName=GitHub.copilot" target="_blank" rel="noopener"
+                >↗ GitHub Copilot (optional mit Education)</a
+              >
+            </p>
+            <ol class="step-list click-path">
+              <li>Lade VS Code herunter und installiere es.</li>
+              <li>Öffne VS Code einmal neu nach der Installation.</li>
+              <li>Gehe links auf <code>Extensions</code> und installiere <code>SFTP (Natizyskunk)</code>.</li>
+              <li>Optional: Melde dich bei VS Code mit GitHub an.</li>
+            </ol>
+            <ul class="checkbox-list">
+              <li>
+                <label class="checkline"><input type="checkbox" data-check="vscode-install" /> VS Code ist installiert</label>
+              </li>
+              <li>
+                <label class="checkline"><input type="checkbox" data-check="vscode-extensions" /> SFTP Extension ist installiert</label>
+              </li>
+              <li>
+                <label class="checkline"
+                  ><input type="checkbox" data-check="vscode-project-open" /> Ich habe mein Projekt in VS Code geöffnet (nicht
+                  Desktop/Downloads)</label
+                >
+              </li>
+            </ul>
+          </div>
         </div>
+      </section>
 
-        <div class="card card--accent">
-          <div class="card-label">Projektvorlage (Download)</div>
-          <p>Nutze diese Vorlage als Startpunkt für neue Modulprojekte, damit Struktur und Dateien direkt passen.</p>
-          <p>
-            <a class="btn" href="./downloads/VORLAGE_IntMed_II.zip" download>⬇ Vorlage herunterladen (ZIP)</a>
+      <section class="section" id="sftp">
+        <div class="section-inner">
+          <div class="section-header">
+            <span class="section-tag">03 · SFTP</span>
+            <span class="section-duration">15 Min</span>
+          </div>
+          <h2 class="section-title">SFTP Konfiguration (Copy / Paste)</h2>
+          <p class="section-lead">
+            Du wirst hier Schritt für Schritt geführt – damit SFTP im richtigen Projektordner sofort sauber funktioniert.
           </p>
-          <label class="checkline"><input type="checkbox" data-check="kickoff-template" /> Ich habe die Vorlage heruntergeladen und entpackt</label>
-        </div>
-      </div>
-    </section>
 
-    <section class="section" id="vscode">
-      <div class="section-inner">
-        <div class="section-header">
-          <span class="section-tag">02 · VS Code</span>
-          <span class="section-duration">10 Min</span>
-        </div>
-        <h2 class="section-title">Visual Studio Code + Basis Extensions</h2>
-        <p class="section-lead">VS Code muss installiert sein. Danach Erweiterungen sauber nachziehen.</p>
+          <div class="card">
+            <div class="card-label">Was heisst „Projektordner öffnen“?</div>
+            <ul class="bullet-list">
+              <li>
+                Du öffnest in VS Code <strong>genau den von dir angelegten Projektordner mit deiner Website</strong> (z. B.
+                <code>mein-im-projekt</code>).
+              </li>
+              <li>
+                Darin liegen deine Dateien und Ordner wie <code>index.html</code>, <code>css/styles.css</code>, <code>js/script.js</code>.
+              </li>
+              <li>
+                Achte darauf, dass du <strong>nicht</strong> aus Versehen einen übergeordneten Ordner, wie z. B. Desktop, Downloads oder den
+                ganzen Benutzerordner öffnest.
+              </li>
+              <li>
+                Quick-Check: In VS Code links im Explorer siehst du oben den Namen deines Projektordners (z. B.
+                <code>mein-im-projekt</code>).
+              </li>
+            </ul>
+          </div>
 
-        <div class="card card--interactive">
-          <p>
-            <a href="https://code.visualstudio.com/" target="_blank" rel="noopener">↗ VS Code Download</a><br />
-            <a href="https://marketplace.visualstudio.com/items?itemName=Natizyskunk.sftp" target="_blank" rel="noopener">↗ SFTP Extension (Natizyskunk)</a><br />
-            <a href="https://marketplace.visualstudio.com/items?itemName=GitHub.copilot" target="_blank" rel="noopener">↗ GitHub Copilot (optional mit Education)</a>
-          </p>
-          <ol class="step-list click-path">
-            <li>Lade VS Code herunter und installiere es.</li>
-            <li>Öffne VS Code einmal neu nach der Installation.</li>
-            <li>Gehe links auf <code>Extensions</code> und installiere <code>SFTP (Natizyskunk)</code>.</li>
-            <li>Optional: Melde dich bei VS Code mit GitHub an.</li>
-          </ol>
-          <label class="checkline"><input type="checkbox" data-check="vscode-install" /> VS Code ist installiert</label>
-          <label class="checkline"><input type="checkbox" data-check="vscode-extensions" /> SFTP Extension ist installiert</label>
-          <label class="checkline"><input type="checkbox" data-check="vscode-project-open" /> Ich habe mein Projekt in VS Code geöffnet (nicht Desktop/Downloads)</label>
-        </div>
-      </div>
-    </section>
+          <div class="card card--interactive">
+            <div class="card-label">SFTP-Datei im Projekt erstellen (genau so)</div>
+            <ol class="step-list">
+              <li><strong>Projektordner öffnen</strong> in VS Code (nicht den Desktop, Downloads oder übergeordneten Ordner).</li>
+              <li>
+                <strong>Command Palette öffnen</strong>: <code>CMD + SHIFT + P</code> (Mac) / <code>CTRL + SHIFT + P</code> (Windows).
+              </li>
+              <li><strong>Tippen:</strong> <code>SFTP: Config</code> und ausführen.</li>
+              <li>VS Code erstellt automatisch den Ordner <code>.vscode</code> mit der Datei <code>sftp.json</code>.</li>
+              <li>Den gesamten Inhalt unten einfügen, Platzhalter ersetzen, speichern.</li>
+            </ol>
+          </div>
 
-    <section class="section" id="sftp">
-      <div class="section-inner">
-        <div class="section-header">
-          <span class="section-tag">03 · SFTP</span>
-          <span class="section-duration">15 Min</span>
-        </div>
-        <h2 class="section-title">SFTP Konfiguration (Copy / Paste)</h2>
-        <p class="section-lead">Du wirst hier Schritt für Schritt geführt – damit SFTP im richtigen Projektordner sofort sauber funktioniert.</p>
-
-        <div class="card">
-          <div class="card-label">Was heisst „Projektordner öffnen“?</div>
-          <ul class="bullet-list">
-            <li>Du öffnest in VS Code <strong>genau den Ordner deiner Website</strong> (z. B. <code>im1-portfolio-max</code>).</li>
-            <li>Darin liegen deine Dateien wie <code>index.html</code>, <code>styles.css</code>, <code>script.js</code>.</li>
-            <li><strong>Nicht</strong> Desktop/Downloads/ganzer Benutzerordner öffnen.</li>
-            <li>Quick-Check: In VS Code links im Explorer siehst du oben den Projektnamen.</li>
-          </ul>
-        </div>
-
-        <div class="card card--interactive">
-          <div class="card-label">SFTP-Datei im Projekt erstellen (genau so)</div>
-          <ol class="step-list">
-            <li><strong>Projektordner öffnen</strong> in VS Code (nicht den Desktop, nicht Downloads).</li>
-            <li><strong>Command Palette öffnen</strong>: <code>CMD + SHIFT + P</code> (Mac) / <code>CTRL + SHIFT + P</code> (Windows).</li>
-            <li><strong>Tippen:</strong> <code>SFTP: Config</code> und ausführen.</li>
-            <li>VS Code erstellt automatisch den Ordner <code>.vscode</code> mit der Datei <code>sftp.json</code>.</li>
-            <li>Den gesamten Inhalt unten einfügen, Platzhalter ersetzen, speichern.</li>
-          </ol>
-        </div>
-
-        <div class="code-wrap critical">
-          <p class="critical-note">🔴 Pflicht-Schritt: Ohne diese SFTP-Konfiguration funktioniert dein Upload/Deploy nicht zuverlässig.</p>
-<pre><code id="code-sftp">{
+          <div class="code-wrap critical">
+            <p class="critical-note">
+              🔴 Pflicht-Schritt: Ohne diese SFTP-Konfiguration funktioniert dein Upload/Deploy nicht zuverlässig.
+            </p>
+            <pre><code id="code-sftp">{
   "name": "hostpoint-main",
   "host": "replace-this-hostname",
   "protocol": "ftp",
@@ -205,275 +250,404 @@
     ".git"
   ]
 }</code></pre>
-          <button class="btn" data-copy="code-sftp">SFTP Config kopieren</button>
-        </div>
+            <button class="btn" data-copy="code-sftp">SFTP Config kopieren</button>
+          </div>
 
-        <div class="card">
-          <div class="card-label">Sauber arbeiten mit SFTP</div>
-          <ul class="bullet-list">
-            <li>Immer im <strong>richtigen Projektordner</strong> arbeiten.</li>
-            <li>Vor erstem Sync: kleine Testdatei deployen und URL checken.</li>
-            <li>Nie fremde/alte Projekte überschreiben (remotePath prüfen).</li>
-            <li>Credentials niemals in README/Code committen.</li>
+          <div class="card">
+            <div class="card-label">Sauber arbeiten mit SFTP</div>
+            <ul class="bullet-list">
+              <li>Immer im <strong>richtigen Projektordner</strong> arbeiten.</li>
+              <li>Vor erstem Sync: kleine Testdatei deployen und URL checken.</li>
+              <li>Nie fremde/alte Projekte überschreiben (remotePath prüfen).</li>
+              <li>Credentials niemals in README/Code committen.</li>
+            </ul>
+          </div>
+
+          <ul class="checkbox-list">
+            <li>
+              <label class="checkline"
+                ><input type="checkbox" data-check="sftp-file-created" /> <code>.vscode/sftp.json</code> wurde im Projekt korrekt
+                erstellt</label
+              >
+            </li>
+            <li>
+              <label class="checkline"
+                ><input type="checkbox" data-check="sftp-credentials" /> Host, Username, Passwort wurden korrekt eingetragen</label
+              >
+            </li>
+            <li>
+              <label class="checkline"
+                ><input type="checkbox" data-check="sftp-ready" /> SFTP Verbindung funktioniert (Sync Local → Remote)</label
+              >
+            </li>
+            <li>
+              <label class="checkline"
+                ><input type="checkbox" data-check="sftp-first-upload" /> Erste Testdatei ist online erreichbar</label
+              >
+            </li>
           </ul>
         </div>
+      </section>
 
-        <label class="checkline"><input type="checkbox" data-check="sftp-file-created" /> <code>.vscode/sftp.json</code> wurde im Projekt korrekt erstellt</label>
-        <label class="checkline"><input type="checkbox" data-check="sftp-credentials" /> Host, Username, Passwort wurden korrekt eingetragen</label>
-        <label class="checkline"><input type="checkbox" data-check="sftp-ready" /> SFTP Verbindung funktioniert (Sync Local → Remote)</label>
-        <label class="checkline"><input type="checkbox" data-check="sftp-first-upload" /> Erste Testdatei ist online erreichbar</label>
-      </div>
-    </section>
+      <section class="section" id="github">
+        <div class="section-inner">
+          <div class="section-header">
+            <span class="section-tag">04 · GitHub</span>
+            <span class="section-duration">20 Min</span>
+          </div>
+          <h2 class="section-title">GitHub Account + GitHub Desktop</h2>
+          <p class="section-lead">FHGR Mail für Education Benefits nutzen, danach in GitHub Desktop ein neues Projekt sauber aufsetzen.</p>
 
-    <section class="section" id="github">
-      <div class="section-inner">
-        <div class="section-header">
-          <span class="section-tag">04 · GitHub</span>
-          <span class="section-duration">20 Min</span>
-        </div>
-        <h2 class="section-title">GitHub Account + GitHub Desktop</h2>
-        <p class="section-lead">FHGR Mail für Education Benefits nutzen, danach in GitHub Desktop ein neues Projekt sauber aufsetzen.</p>
+          <div class="card card--interactive">
+            <p>
+              <a href="https://education.github.com/students" target="_blank" rel="noopener">↗ GitHub Education</a><br />
+              <a href="https://desktop.github.com/" target="_blank" rel="noopener">↗ GitHub Desktop</a>
+            </p>
 
-        <div class="card card--interactive">
-          <p>
-            <a href="https://education.github.com/students" target="_blank" rel="noopener">↗ GitHub Education</a><br />
-            <a href="https://desktop.github.com/" target="_blank" rel="noopener">↗ GitHub Desktop</a>
-          </p>
-          <label class="checkline"><input type="checkbox" data-check="github-account" /> Du hast einen GitHub Account</label>
-          <label class="checkline"><input type="checkbox" data-check="github-desktop" /> Du bist in GitHub Desktop eingeloggt</label>
+            <ul class="checkbox-list">
+              <li>
+                <label class="checkline"><input type="checkbox" data-check="github-account" /> Du hast einen GitHub Account</label>
+              </li>
+              <li>
+                <label class="checkline"
+                  ><input type="checkbox" data-check="github-desktop" /> Du bist in GitHub Desktop mit deinem Account eingeloggt</label
+                >
+              </li>
+            </ul>
 
-          <div class="card-label" style="margin-top:10px;">Projekt in GitHub Desktop erstellen (klick-genau)</div>
-          <ol class="step-list click-path">
-            <li><code>GitHub Desktop öffnen</code></li>
-            <li><code>Add ▾</code> klicken</li>
-            <li><code>Create New Repository...</code> wählen</li>
-            <li>Repository Name setzen (z. B. <code>im1-portfolio-max-muster</code>)</li>
-            <li>Local Path wählen, der zu deinem Modul-Projekt gehört</li>
-            <li><code>Create Repository</code> klicken</li>
-            <li><code>Publish repository</code> klicken</li>
-          </ol>
-        </div>
+            <div class="card-label" style="margin-top: 10px">Projekt in GitHub Desktop erstellen (klick-genau)</div>
+            <ol class="step-list click-path">
+              <li><code>GitHub Desktop öffnen</code></li>
+              <li><code>Add ▾</code> klicken</li>
+              <li><code>Create New Repository...</code> wählen</li>
+              <li>Repository Name setzen (z. B. <code>im1-portfolio-max-muster</code>)</li>
+              <li>Lokalen Pfad zu deinem Projektordner auswählen.</li>
+              <li><code>Create Repository</code> klicken</li>
+              <li><code>Publish repository</code> klicken</li>
+            </ol>
+          </div>
 
-        <div class="shot-grid github-shots">
-          <figure class="shot-card">
-            <img class="zoomable" src="./assets/github-desktop-main.jpg" alt="GitHub Desktop Übersicht" loading="lazy" />
-            <figcaption><strong>GitHub Desktop:</strong> Repository-Übersicht mit Changes/History.</figcaption>
-          </figure>
-          <figure class="shot-card">
-            <img class="zoomable" src="./assets/github-desktop-create-repo.jpg" alt="GitHub Desktop Create New Repository" loading="lazy" />
-            <figcaption><strong>Add ▾ → Create New Repository…</strong> Genau hier startest du ein neues Projekt.</figcaption>
-          </figure>
-        </div>
+          <div class="shot-grid github-shots">
+            <figure class="shot-card">
+              <img class="zoomable" src="./assets/github-desktop-main.jpg" alt="GitHub Desktop Übersicht" loading="lazy" />
+              <figcaption><strong>GitHub Desktop:</strong> Repository-Übersicht mit Changes/History.</figcaption>
+            </figure>
+            <figure class="shot-card">
+              <img
+                class="zoomable"
+                src="./assets/github-desktop-create-repo.jpg"
+                alt="GitHub Desktop Create New Repository"
+                loading="lazy" />
+              <figcaption><strong>Add ▾ → Create New Repository…</strong> Genau hier startest du ein neues Projekt.</figcaption>
+            </figure>
+          </div>
 
-        <div class="card card--interactive">
-          <div class="card-label">Repository nach Abgabe auf Public stellen (optional, wenn gefordert)</div>
-          <ol class="step-list click-path">
-            <li>GitHub im Browser öffnen und ins richtige Repo gehen.</li>
-            <li><code>Settings</code> → ganz nach unten zu <code>Danger Zone</code>.</li>
-            <li><code>Change repository visibility</code> wählen.</li>
-            <li>Auf <code>Make public</code> stellen und bestätigen.</li>
-            <li>Vorher unbedingt Secrets/Passwörter prüfen.</li>
-          </ol>
-        </div>
+          <div class="card card--interactive">
+            <div class="card-label">Repository nach Abgabe auf Public stellen (optional, wenn gefordert)</div>
+            <ol class="step-list click-path">
+              <li>GitHub im Browser öffnen und ins richtige Repo gehen.</li>
+              <li><code>Settings</code> → ganz nach unten zu <code>Danger Zone</code>.</li>
+              <li><code>Change repository visibility</code> wählen.</li>
+              <li>Auf <code>Make public</code> stellen und bestätigen.</li>
+              <li>Vorher unbedingt Secrets/Passwörter prüfen.</li>
+            </ol>
+          </div>
 
-        <div class="shot-grid github-shots">
-          <figure class="shot-card">
-            <img class="zoomable" src="./assets/github-public-settings.png" alt="GitHub Repository Settings" loading="lazy" />
-            <figcaption><strong>Settings:</strong> Dort findest du die Sichtbarkeit im Bereich <em>Danger Zone</em>.</figcaption>
-          </figure>
-          <figure class="shot-card">
-            <img class="zoomable" src="./assets/github-public-confirm.png" alt="GitHub public visibility confirmation" loading="lazy" />
-            <figcaption><strong>Make public:</strong> Letzte Bestätigung der Sichtbarkeit.</figcaption>
-          </figure>
-        </div>
+          <div class="shot-grid github-shots">
+            <figure class="shot-card">
+              <img class="zoomable" src="./assets/github-public-settings.png" alt="GitHub Repository Settings" loading="lazy" />
+              <figcaption><strong>Settings:</strong> Dort findest du die Sichtbarkeit im Bereich <em>Danger Zone</em>.</figcaption>
+            </figure>
+            <figure class="shot-card">
+              <img class="zoomable" src="./assets/github-public-confirm.png" alt="GitHub public visibility confirmation" loading="lazy" />
+              <figcaption><strong>Make public:</strong> Letzte Bestätigung der Sichtbarkeit.</figcaption>
+            </figure>
+          </div>
 
-        <div class="code-wrap critical">
-          <p class="critical-note">🔴 Pflicht-Schritt: <code>.gitignore</code> schützt dich vor peinlichen/leaken Dateien im Repository.</p>
-<pre><code id="code-gitignore">.DS_Store
+          <div class="code-wrap critical">
+            <p class="critical-note">
+              🔴 Pflicht-Schritt: <code>.gitignore</code> schützt dich vor peinlichen/leaken Dateien im Repository.
+            </p>
+            <pre><code id="code-gitignore">.DS_Store
 config.php
 .vscode
 .env
 node_modules</code></pre>
-          <button class="btn" data-copy="code-gitignore">.gitignore kopieren</button>
-        </div>
+            <button class="btn" data-copy="code-gitignore">.gitignore kopieren</button>
+          </div>
 
-        <div class="card">
-          <div class="card-label">Sauber arbeiten mit GitHub (Pflicht)</div>
-          <ul class="bullet-list">
-            <li>Commit-Historie in kleinen, verständlichen Schritten.</li>
-            <li>Klare Commit-Messages (<code>feat:</code>, <code>fix:</code>, <code>chore:</code>).</li>
-            <li>Keine Secrets/API-Keys im Repo.</li>
-            <li>Vor Public-Schaltung immer Secret-Check machen.</li>
-          </ul>
-        </div>
-
-        <label class="checkline"><input type="checkbox" data-check="github-repo-created" /> Neues Repository in GitHub Desktop erstellt & publiziert</label>
-        <label class="checkline"><input type="checkbox" data-check="github-commit" /> Erster Commit mit sinnvoller Nachricht erstellt</label>
-        <label class="checkline"><input type="checkbox" data-check="github-clean" /> .gitignore ist aktiv und enthält sensible Dateien</label>
-        <label class="checkline"><input type="checkbox" data-check="github-public" /> Falls gefordert: Repository sicher auf Public gestellt</label>
-      </div>
-    </section>
-
-    <section class="section" id="hostpoint">
-      <div class="section-inner">
-        <div class="section-header">
-          <span class="section-tag">05 · Hostpoint</span>
-          <span class="section-duration">15 Min</span>
-        </div>
-        <h2 class="section-title">Hostpoint Zugang + FTP Credentials holen</h2>
-        <p class="section-lead">Login meist mit <code>vorname.nachname@stud.fhgr.ch</code>, danach FTP Daten in <code>sftp.json</code> eintragen.</p>
-
-        <div class="card card--interactive">
-          <div class="card-label">Hostpoint Klick-Checklist (genaue Reihenfolge)</div>
-          <ol class="step-list click-path">
-            <li><code>Login</code> mit <code>vorname.nachname@stud.fhgr.ch</code></li>
-            <li><code>Hosting</code> / richtigen Service öffnen</li>
-            <li><code>Server</code> Bereich öffnen</li>
-            <li><code>FTP</code> bzw. <code>FTP Accounts</code> öffnen</li>
-            <li><code>Hostname</code>, <code>Username</code>, <code>Passwort</code> kopieren</li>
-            <li>Daten in <code>.vscode/sftp.json</code> einsetzen und speichern</li>
-            <li>In VS Code: <code>SFTP: Sync Local -&gt; Remote</code> ausführen</li>
-          </ol>
-        </div>
-
-        <div class="card">
-          <div class="card-label">Kurz-Ausflug: Subdomains (z. B. projektname.deinedomain.ch)</div>
-          <ul class="bullet-list">
-            <li>Subdomain in Hostpoint unter Domains/Zone verwalten erstellen.</li>
-            <li>Subdomain auf den korrekten Webpfad zeigen lassen.</li>
-            <li>Danach Upload testen und Browser-Cache einmal leeren.</li>
-            <li>Für Modulprojekte: lieber kurze, klare Subdomain-Namen nutzen.</li>
-          </ul>
-        </div>
-
-        <div class="shot-grid">
-          <figure class="shot-card">
-            <img class="zoomable" src="./assets/hostpoint-step-login.jpg" alt="Hostpoint Login und Service Übersicht" loading="lazy" />
-            <figcaption><strong>Schritt A:</strong> Login und richtigen Service/Hosting-Bereich wählen. <em>(Klick zum Vergrössern)</em></figcaption>
-          </figure>
-          <figure class="shot-card">
-            <img class="zoomable" src="./assets/hostpoint-step-server.jpg" alt="Hostpoint Server Übersicht" loading="lazy" />
-            <figcaption><strong>Schritt B:</strong> Serverübersicht öffnen und zu FTP wechseln. <em>(Klick zum Vergrössern)</em></figcaption>
-          </figure>
-          <figure class="shot-card">
-            <img class="zoomable" src="./assets/hostpoint-step-ftp.jpg" alt="Hostpoint FTP Accounts" loading="lazy" />
-            <figcaption><strong>Schritt C:</strong> Host, Username, Passwort übernehmen und in VS Code testen. <em>(Klick zum Vergrössern)</em></figcaption>
-          </figure>
-        </div>
-
-        <label class="checkline"><input type="checkbox" data-check="hostpoint-login" /> Hostpoint Login erfolgreich</label>
-        <label class="checkline"><input type="checkbox" data-check="hostpoint-ftp-open" /> FTP Bereich gefunden und Daten kopiert</label>
-        <label class="checkline"><input type="checkbox" data-check="hostpoint-tested" /> Hostpoint Credentials eingetragen und Verbindung getestet</label>
-        <label class="checkline"><input type="checkbox" data-check="hostpoint-subdomain" /> Ich weiss, wie ich bei Bedarf eine Subdomain aufsetze</label>
-      </div>
-    </section>
-
-    <section class="section" id="lanes">
-      <div class="section-inner">
-        <div class="section-header">
-          <span class="section-tag">06 · Mac / Windows</span>
-          <span class="section-duration">8 Min</span>
-        </div>
-        <h2 class="section-title">MacBook Lane vs. Windows Lane</h2>
-        <p class="section-lead">Damit niemand bei Shortcuts oder Menüs hängen bleibt: beide Wege klar nebeneinander.</p>
-
-        <div class="lane-grid">
-          <article class="card">
-            <div class="card-label">🍎 MacBook Lane</div>
+          <div class="card">
+            <div class="card-label">Sauber arbeiten mit GitHub (Pflicht)</div>
             <ul class="bullet-list">
-              <li>Command Palette: <code>CMD + SHIFT + P</code></li>
-              <li>Datei speichern: <code>CMD + S</code></li>
-              <li>Suche im Projekt: <code>CMD + SHIFT + F</code></li>
-              <li>SFTP Sync: Command Palette → <code>SFTP: Sync Local -&gt; Remote</code></li>
-              <li>GitHub Desktop: Publish + Commit aus dem App-Fenster</li>
+              <li>Commit-Historie in kleinen, verständlichen Schritten.</li>
+              <li>Klare Commit-Messages (<code>feat:</code>, <code>fix:</code>, <code>chore:</code>).</li>
+              <li>Keine Secrets/API-Keys im Repo.</li>
+              <li>Vor Public-Schaltung immer Secret-Check machen.</li>
             </ul>
-          </article>
-          <article class="card">
-            <div class="card-label">🪟 Windows Lane</div>
+          </div>
+
+          <ul class="checkbox-list">
+            <li>
+              <label class="checkline"
+                ><input type="checkbox" data-check="github-repo-created" /> Neues Repository in GitHub Desktop erstellt & publiziert</label
+              >
+            </li>
+            <li>
+              <label class="checkline"
+                ><input type="checkbox" data-check="github-commit" /> Erster Commit mit sinnvoller Nachricht erstellt</label
+              >
+            </li>
+
+            <li>
+              <label class="checkline"
+                ><input type="checkbox" data-check="github-clean" /> .gitignore ist aktiv und enthält sensible Dateien</label
+              >
+            </li>
+
+            <li>
+              <label class="checkline"
+                ><input type="checkbox" data-check="github-public" /> Falls gefordert: Repository sicher auf Public gestellt</label
+              >
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section" id="hostpoint">
+        <div class="section-inner">
+          <div class="section-header">
+            <span class="section-tag">05 · Hostpoint</span>
+            <span class="section-duration">15 Min</span>
+          </div>
+          <h2 class="section-title">Hostpoint Zugang + FTP Credentials holen</h2>
+          <p class="section-lead">
+            Login meist mit <code>vorname.nachname@stud.fhgr.ch</code>, danach FTP Daten in <code>sftp.json</code> eintragen.
+          </p>
+
+          <div class="card card--interactive">
+            <div class="card-label">Hostpoint Klick-Checklist (genaue Reihenfolge)</div>
+            <ol class="step-list click-path">
+              <li><code>Login</code> mit <code>vorname.nachname@stud.fhgr.ch</code></li>
+              <li><code>Hosting</code> / richtigen Service öffnen (Promotion Smart Server)</li>
+              <li><code>Server</code> Bereich öffnen</li>
+              <li><code>FTP</code> bzw. <code>FTP Accounts</code> öffnen</li>
+              <li>
+                Falls noch nicht geschehen: neue FTP Account erstellen. <br /><strong>ACHTUNG</strong>: Passwort muss sicher gespeichert
+                werden!
+              </li>
+              <li><code>Hostname</code>, <code>Username</code>, <code>Passwort</code> kopieren</li>
+              <li>Daten in <code>.vscode/sftp.json</code> einsetzen und speichern</li>
+              <li>In VS Code: <code>SFTP: Sync Local -&gt; Remote</code> ausführen</li>
+            </ol>
+          </div>
+
+          <div class="card">
+            <div class="card-label">Kurz-Ausflug: Subdomains (z. B. projektname.deinedomain.ch)</div>
             <ul class="bullet-list">
-              <li>Command Palette: <code>CTRL + SHIFT + P</code></li>
-              <li>Datei speichern: <code>CTRL + S</code></li>
-              <li>Suche im Projekt: <code>CTRL + SHIFT + F</code></li>
-              <li>SFTP Sync: Command Palette → <code>SFTP: Sync Local -&gt; Remote</code></li>
-              <li>GitHub Desktop: Publish + Commit aus dem App-Fenster</li>
+              <li>Subdomain in Hostpoint unter Domains/Zone verwalten erstellen.</li>
+              <li>Subdomain auf den korrekten Webpfad zeigen lassen.</li>
+              <li>Danach Upload testen und Browser-Cache einmal leeren.</li>
+              <li>Für Modulprojekte: lieber kurze, klare Subdomain-Namen nutzen.</li>
             </ul>
-          </article>
-        </div>
+          </div>
 
-        <div class="card card--interactive">
-          <div class="card-label">Wichtigste Punkte für beide Lanes</div>
-          <ul class="bullet-list">
-            <li>Immer zuerst den <strong>korrekten Projektordner</strong> öffnen.</li>
-            <li>Kein Copy-Paste von Passwörtern in Code-Dateien.</li>
-            <li>Vor Abgabe: Repo aufräumen, letzte Live-URL prüfen, dann erst final committen.</li>
+          <div class="shot-grid">
+            <figure class="shot-card">
+              <img class="zoomable" src="./assets/hostpoint-step-login.jpg" alt="Hostpoint Login und Service Übersicht" loading="lazy" />
+              <figcaption>
+                <strong>Schritt A:</strong> Login und richtigen Service/Hosting-Bereich wählen. <em>(Klick zum Vergrössern)</em>
+              </figcaption>
+            </figure>
+            <figure class="shot-card">
+              <img class="zoomable" src="./assets/hostpoint-step-server.jpg" alt="Hostpoint Server Übersicht" loading="lazy" />
+              <figcaption>
+                <strong>Schritt B:</strong> Serverübersicht öffnen und zu FTP wechseln. <em>(Klick zum Vergrössern)</em>
+              </figcaption>
+            </figure>
+            <figure class="shot-card">
+              <img class="zoomable" src="./assets/hostpoint-step-ftp.jpg" alt="Hostpoint FTP Accounts" loading="lazy" />
+              <figcaption>
+                <strong>Schritt C:</strong> Host, Username, Passwort übernehmen und in VS Code testen. <em>(Klick zum Vergrössern)</em>
+              </figcaption>
+            </figure>
+          </div>
+          <ul class="checkbox-list">
+            <li>
+              <label class="checkline"><input type="checkbox" data-check="hostpoint-login" /> Hostpoint Login erfolgreich</label>
+            </li>
+            <li>
+              <label class="checkline"
+                ><input type="checkbox" data-check="hostpoint-ftp-open" /> FTP Bereich gefunden und Daten kopiert</label
+              >
+            </li>
+            <li>
+              <label class="checkline"
+                ><input type="checkbox" data-check="hostpoint-tested" /> Hostpoint Credentials eingetragen und Verbindung getestet</label
+              >
+            </li>
+            <li>
+              <label class="checkline"
+                ><input type="checkbox" data-check="hostpoint-subdomain" /> Ich weiss, wie ich bei Bedarf eine Subdomain aufsetze</label
+              >
+            </li>
           </ul>
         </div>
+      </section>
 
-        <label class="checkline"><input type="checkbox" data-check="lanes-understood" /> Meine Lane ist klar (Mac oder Windows) und ich kenne die Shortcuts</label>
-        <label class="checkline"><input type="checkbox" data-check="lanes-tested" /> Ich habe mindestens 2 wichtige Shortcuts in meiner Lane getestet</label>
-      </div>
-    </section>
+      <section class="section" id="lanes">
+        <div class="section-inner">
+          <div class="section-header">
+            <span class="section-tag">06 · Mac / Windows</span>
+            <span class="section-duration">8 Min</span>
+          </div>
+          <h2 class="section-title">MacBook Lane vs. Windows Lane</h2>
+          <p class="section-lead">Damit niemand bei Shortcuts oder Menüs hängen bleibt: beide Wege klar nebeneinander.</p>
 
-    <section class="section" id="quality">
-      <div class="section-inner">
-        <div class="section-header">
-          <span class="section-tag">07 · Workflow</span>
-          <span class="section-duration">10 Min</span>
-        </div>
-        <h2 class="section-title">Qualitäts-Loop pro Projekt</h2>
-        <p class="section-lead">Diesen Loop pro Arbeitsblock sauber fahren:</p>
+          <div class="lane-grid">
+            <article class="card">
+              <div class="card-label">🍎 MacBook Lane</div>
+              <ul class="bullet-list">
+                <li>Command Palette: <code>CMD + SHIFT + P</code></li>
+                <li>Datei speichern: <code>CMD + S</code></li>
+                <li>Suche im Projekt: <code>CMD + SHIFT + F</code></li>
+                <li>SFTP Sync: Command Palette → <code>SFTP: Sync Local -&gt; Remote</code></li>
+                <li>GitHub Desktop: Publish + Commit aus dem App-Fenster</li>
+              </ul>
+            </article>
+            <article class="card">
+              <div class="card-label">🪟 Windows Lane</div>
+              <ul class="bullet-list">
+                <li>Command Palette: <code>CTRL + SHIFT + P</code></li>
+                <li>Datei speichern: <code>CTRL + S</code></li>
+                <li>Suche im Projekt: <code>CTRL + SHIFT + F</code></li>
+                <li>SFTP Sync: Command Palette → <code>SFTP: Sync Local -&gt; Remote</code></li>
+                <li>GitHub Desktop: Publish + Commit aus dem App-Fenster</li>
+              </ul>
+            </article>
+          </div>
 
-        <div class="timeline-strip">
-          <div class="tl-item"><div class="tl-dot"></div><div class="tl-label">Plan</div><div class="tl-time">Scope 1 Satz</div></div>
-          <div class="tl-line"></div>
-          <div class="tl-item"><div class="tl-dot"></div><div class="tl-label">Build</div><div class="tl-time">lokal coden</div></div>
-          <div class="tl-line"></div>
-          <div class="tl-item"><div class="tl-dot"></div><div class="tl-label">Commit</div><div class="tl-time">klar benannt</div></div>
-          <div class="tl-line"></div>
-          <div class="tl-item"><div class="tl-dot"></div><div class="tl-label">Sync</div><div class="tl-time">Push + SFTP</div></div>
-          <div class="tl-line"></div>
-          <div class="tl-item tl-item--active"><div class="tl-dot"></div><div class="tl-label">Check</div><div class="tl-time">Live testen</div></div>
-        </div>
+          <div class="card card--interactive">
+            <div class="card-label">Wichtigste Punkte für beide Lanes</div>
+            <ul class="bullet-list">
+              <li>Immer zuerst den <strong>korrekten Projektordner</strong> öffnen.</li>
+              <li>Kein Copy-Paste von Passwörtern in Code-Dateien.</li>
+              <li>Vor Abgabe: Repo aufräumen, letzte Live-URL prüfen, dann erst final committen.</li>
+            </ul>
+          </div>
 
-        <div class="card">
-          <div class="card-label">Checkliste pro Arbeitsblock</div>
-          <label class="checkline"><input type="checkbox" data-check="workflow-plan" /> Plan (1 Satz Ziel) vor dem Start geschrieben</label>
-          <label class="checkline"><input type="checkbox" data-check="workflow-commit" /> Commit nach dem Block erstellt</label>
-          <label class="checkline"><input type="checkbox" data-check="workflow-sync" /> Push + SFTP Deploy durchgeführt</label>
-          <label class="checkline"><input type="checkbox" data-check="workflow-check" /> Live-URL geprüft (Browser)</label>
-        </div>
-
-        <label class="checkline"><input type="checkbox" data-check="workflow-done" /> Workflow einmal komplett durchgeführt</label>
-      </div>
-    </section>
-
-    <section class="section" id="done">
-      <div class="section-inner">
-        <div class="section-header">
-          <span class="section-tag">08 · Final</span>
-          <span class="section-duration">5 Min</span>
-        </div>
-        <h2 class="section-title">Done-Definition</h2>
-        <div class="card card--accent">
-          <ul class="check-list check-list--yes">
-            <li>VS Code + SFTP + GitHub Desktop laufen</li>
-            <li>Repo ist sauber geführt (Commits nachvollziehbar)</li>
-            <li>Deployment auf Hosting funktioniert reproduzierbar</li>
-            <li>Keine sensiblen Daten im Repo</li>
+          <ul class="checkbox-list">
+            <li>
+              <label class="checkline">
+                <input type="checkbox" data-check="lanes-understood" /> Meine Lane ist klar (Mac oder Windows) und ich kenne die
+                Shortcuts</label
+              >
+            </li>
+            <li>
+              <label class="checkline"
+                ><input type="checkbox" data-check="lanes-tested" /> Ich habe mindestens 2 wichtige Shortcuts in meiner Lane getestet</label
+              >
+            </li>
           </ul>
         </div>
-        <label class="checkline"><input type="checkbox" data-check="final-qa" /> Ich habe geprüft, dass keine Passwörter/Secrets im Repo liegen</label>
-        <label class="checkline"><input type="checkbox" data-check="final-link" /> Ich habe meine Live-URL + Repo-URL dokumentiert</label>
-        <label class="checkline"><input type="checkbox" data-check="final-done" /> Setup komplett abgeschlossen</label>
-      </div>
-    </section>
-  </main>
+      </section>
 
-  <div class="image-modal" id="imageModal" hidden>
-    <button class="image-modal-close" id="imageModalClose" aria-label="Bild schliessen">✕</button>
-    <img id="imageModalImg" src="" alt="Vergrössertes Bild" />
-  </div>
+      <section class="section" id="quality">
+        <div class="section-inner">
+          <div class="section-header">
+            <span class="section-tag">07 · Workflow</span>
+            <span class="section-duration">10 Min</span>
+          </div>
+          <h2 class="section-title">Qualitäts-Loop pro Projekt</h2>
+          <p class="section-lead">Diesen Loop pro Arbeitsblock sauber fahren:</p>
 
-  <script src="./app.js"></script>
-</body>
+          <div class="timeline-strip">
+            <div class="tl-item">
+              <div class="tl-dot"></div>
+              <div class="tl-label">Plan</div>
+              <div class="tl-time">Scope 1 Satz</div>
+            </div>
+            <div class="tl-line"></div>
+            <div class="tl-item">
+              <div class="tl-dot"></div>
+              <div class="tl-label">Build</div>
+              <div class="tl-time">lokal coden</div>
+            </div>
+            <div class="tl-line"></div>
+            <div class="tl-item">
+              <div class="tl-dot"></div>
+              <div class="tl-label">Commit</div>
+              <div class="tl-time">klar benannt</div>
+            </div>
+            <div class="tl-line"></div>
+            <div class="tl-item">
+              <div class="tl-dot"></div>
+              <div class="tl-label">Sync</div>
+              <div class="tl-time">Push + SFTP</div>
+            </div>
+            <div class="tl-line"></div>
+            <div class="tl-item tl-item--active">
+              <div class="tl-dot"></div>
+              <div class="tl-label">Check</div>
+              <div class="tl-time">Live testen</div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-label">Checkliste pro Arbeitsblock</div>
+
+            <ul class="checkbox-list">
+              <li>
+                <label class="checkline"></label>
+                <input type="checkbox" data-check="workflow-plan" /> Plan (1 Satz Ziel) vor dem Start geschrieben</label>
+              </li>
+              <li>
+                <label class="checkline"><input type="checkbox" data-check="workflow-commit" /> Commit nach dem Block erstellt</label>
+              </li>
+              <li>
+                <label class="checkline"><input type="checkbox" data-check="workflow-sync" /> Push + SFTP Deploy durchgeführt</label>
+              </li>
+              <li>
+                <label class="checkline"><input type="checkbox" data-check="workflow-check" /> Live-URL geprüft (Browser)</label>
+              </li>
+            </ul>
+          </div>
+          <ul class="checkbox-list">
+            <li>
+              <label class="checkline"><input type="checkbox" data-check="workflow-understood" /> Ich habe den Workflow verstanden</label>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section" id="done">
+        <div class="section-inner">
+          <div class="section-header">
+            <span class="section-tag">08 · Final</span>
+            <span class="section-duration">5 Min</span>
+          </div>
+          <h2 class="section-title">Done-Definition</h2>
+          <div class="card card--accent">
+            <ul class="check-list check-list--yes">
+              <li>VS Code + SFTP + GitHub Desktop laufen</li>
+              <li>Repo ist sauber geführt (Commits nachvollziehbar)</li>
+              <li>Deployment auf Hosting funktioniert reproduzierbar</li>
+              <li>Keine sensiblen Daten im Repo</li>
+            </ul>
+          </div>
+          <label class="checkline"
+            ><input type="checkbox" data-check="final-qa" /> Ich habe geprüft, dass keine Passwörter/Secrets im Repo liegen</label
+          >
+          <label class="checkline"><input type="checkbox" data-check="final-link" /> Ich habe meine Live-URL + Repo-URL dokumentiert</label>
+          <label class="checkline"><input type="checkbox" data-check="final-done" /> Setup komplett abgeschlossen</label>
+        </div>
+      </section>
+    </main>
+
+    <div class="image-modal" id="imageModal" hidden>
+      <button class="image-modal-close" id="imageModalClose" aria-label="Bild schliessen">✕</button>
+      <img id="imageModalImg" src="" alt="Vergrössertes Bild" />
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
 </html>

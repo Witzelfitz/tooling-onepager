@@ -18,6 +18,7 @@
   --red-mid: rgba(188, 43, 33, 0.22);
   --blue: #2563eb;
   --green: #15803d;
+  --code: #651580;
   --font-head: 'IBM Plex Mono', monospace;
   --font-body: 'IBM Plex Sans', sans-serif;
   --sidebar-w: 250px;
@@ -296,6 +297,10 @@ code {
   background: linear-gradient(135deg, rgba(37, 99, 235, 0.05), rgba(37, 99, 235, 0.02));
 }
 
+.card--transparent {
+  padding: 0 18px;
+}
+
 .card-label {
   font-size: 11px;
   letter-spacing: 0.08em;
@@ -312,7 +317,8 @@ code {
 }
 
 .check-list,
-.bullet-list {
+.bullet-list,
+.checkbox-list {
   list-style: none;
   display: flex;
   flex-direction: column;
@@ -334,6 +340,10 @@ code {
   font-weight: 600;
 }
 
+.checkbox-list {
+  margin: 1.5rem 18px;
+}
+
 .bullet-list li::before {
   content: '•';
   position: absolute;
@@ -345,9 +355,9 @@ code {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  font-size: 12px;
+  font-size: 14px;
   color: var(--text-muted);
-  margin: 8px 0;
+  margin: 0px 0;
 }
 
 .checkline input { margin-top: 1px; }
@@ -415,8 +425,10 @@ pre {
 }
 
 code {
-  font-size: 12px;
+  font-size: 14px;
   color: #3f3628;
+  margin: 0 3px;
+  color: var(--code);
 }
 
 .btn {
